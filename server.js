@@ -11,6 +11,8 @@ app.get("/", function(req, res){
     res.sendFile(__dirname + "/public/index.html");
 })
 
-app.post("/", function(req, res){
-    res.sendFile(__dirname + "public/index.html")
-})
+app.post('/submit', (req, res) => {
+    const formData = req.body;
+    console.log(formData);
+    res.send('Form submitted successfully!');
+});
